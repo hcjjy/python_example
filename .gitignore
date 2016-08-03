@@ -45,3 +45,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#only ignore root myproject dir
+myproject/
+
+#only ignore root __pycache__ dir
+__pycache__/
