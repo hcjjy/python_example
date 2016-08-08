@@ -41,11 +41,11 @@ DBSession = sessionmaker(bind = engine)
 session = DBSession()
 
 #创建新User对象：
-new_user = User(id=3,name = 'Bob')
+new_user = User(id=13,name = 'Bob')
 #创建Book对象:
-new_book = Book(id =1005,name = 'sdxl',user_id = 3)
-new_book1 = Book(id =2003,name = 'xyj',user_id = 3)
-new_book2 = Book(id =3004,name = 'xjqxz',user_id = 3)
+new_book = Book(id =11005,name = 'sdxl',user_id = 13)
+new_book1 = Book(id =12003,name = 'xyj',user_id = 13)
+new_book2 = Book(id =13004,name = 'xjqxz',user_id = 13)
 #添加到session:
 session.add(new_user)
 session.add(new_book);
@@ -62,15 +62,15 @@ session.close()
 #创建Session：
 session = DBSession()
 #创建Query查询，filter是where条件，最后调用one()返回唯一行，如果调用all()则返回所有行：
-user = session.query(User).filter(User.id ==3).one()
-#答应类型和对象的name属性：
+user = session.query(User).filter(User.id ==13).one()
+#返回类型和对象的name属性：
 print('type:', type(user))
 print('name:',user.name)
 for book in user.books:
 	print('name:',[book.id,book.name])
+
 #关闭Session：
 session.close()
-
 
 
 # create table User(
